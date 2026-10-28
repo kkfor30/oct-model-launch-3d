@@ -1,0 +1,28 @@
+{
+  "name": "oct-model-launch-3d",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "still": "remotion still src/index.ts Launch out/still.png --gl=angle",
+    "score": "python audio/score_v5_drive.py 63.3667 out/score.wav",
+    "render": "remotion render src/index.ts Launch out/video.mp4 --gl=angle --concurrency=2 --timeout=120000 --muted",
+    "mux": "ffmpeg -y -i out/video.mp4 -i out/score.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest out/final.mp4"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.114.0",
+    "@react-three/fiber": "^8.17.10",
+    "@react-three/postprocessing": "^2.16.3",
+    "@remotion/cli": "^4.0.242",
+    "@remotion/three": "^4.0.242",
+    "@types/react": "^18.3.12",
+    "@types/three": "^0.169.0",
+    "postprocessing": "^6.36.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.242",
+    "three": "^0.169.0",
+    "typescript": "^5.6.3"
+  }
+}
