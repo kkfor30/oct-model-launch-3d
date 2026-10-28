@@ -2,6 +2,8 @@
 
 一条 63 秒的 3D 动画，盘点 2026 年 10 月的 6 个 AI 模型发布。画面、镜头和配乐全部由代码生成：Three.js（React Three Fiber）+ Remotion 出画面，Python 合成配乐。没有用视频生成模型，也没有用素材库。代码由 Claude Opus 5.5 编写。
 
+https://github.com/user-attachments/assets/03b5d2ae-8324-4675-b2eb-23530d15e7eb
+
 ![关键帧](docs/keyframes.png)
 
 - **想直接出片**：按下面的「运行」做。
